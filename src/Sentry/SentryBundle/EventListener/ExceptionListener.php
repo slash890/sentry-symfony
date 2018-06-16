@@ -25,7 +25,7 @@ class ExceptionListener
         $exception = $event->getException();
 
         // dont capture HTTP responses
-        if ($exception instanceof HttpException) {
+        if ($exception instanceof HttpExceptionInterface) {
             return;
         }
 
